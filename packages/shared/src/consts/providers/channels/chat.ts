@@ -2,6 +2,7 @@ import { ChannelTypeEnum, ChatProviderIdEnum, ToolProviderIdEnum } from '../../.
 import { UTM_CAMPAIGN_QUERY_PARAM } from '../../../ui';
 import { photonImessageGroupConfigurations } from '../configurations/provider-configuration';
 import {
+  awsEndUserMessagingSocialConfig,
   chatWebhookConfig,
   getstreamConfig,
   grafanaOnCallConfig,
@@ -127,6 +128,14 @@ export const chatProviders: IProviderConfig[] = [
     credentials: whatsAppBusinessConfig,
     docReference: `https://docs.novu.co/platform/integrations/chat/whats-app${UTM_CAMPAIGN_QUERY_PARAM}`,
     logoFileName: { light: 'whatsapp-business.svg', dark: 'whatsapp-business.svg' },
+  },
+  {
+    id: ChatProviderIdEnum.AwsEndUserMessagingSocial,
+    displayName: 'AWS End User Messaging Social',
+    channel: ChannelTypeEnum.CHAT,
+    credentials: awsEndUserMessagingSocialConfig,
+    docReference: 'https://docs.aws.amazon.com/social-messaging/latest/userguide/what-is-service.html',
+    logoFileName: { light: 'sns.svg', dark: 'sns.svg' },
   },
   {
     id: ChatProviderIdEnum.Line,

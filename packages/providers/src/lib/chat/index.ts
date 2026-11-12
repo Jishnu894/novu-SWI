@@ -1,3 +1,4 @@
+export * from './aws-end-user-messaging-social/aws-end-user-messaging-social.provider';
 export { cardToFallbackMarkdown } from './card-render.utils';
 export { type ChatCardValidator, getChatCardValidator } from './card-validators';
 export * from './chat-webhook/chat-webhook.provider';

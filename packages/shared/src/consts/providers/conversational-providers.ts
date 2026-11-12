@@ -14,6 +14,7 @@ export const CONVERSATIONAL_PROVIDERS: ConversationalProvider[] = [
   { providerId: ChatProviderIdEnum.Sendblue, displayName: 'Sendblue' },
   { providerId: ChatProviderIdEnum.PhotonImessage, displayName: 'Photon (iMessage)' },
   { providerId: ChatProviderIdEnum.WhatsAppBusiness, displayName: 'WhatsApp Business' },
+  { providerId: ChatProviderIdEnum.AwsEndUserMessagingSocial, displayName: 'AWS End User Messaging Social' },
   { providerId: ChatProviderIdEnum.MsTeams, displayName: 'MS Teams' },
   { providerId: ChatProviderIdEnum.NovuWebChat, displayName: 'Web Chat' },
   { providerId: ChatProviderIdEnum.Discord, displayName: 'Discord', comingSoon: true },

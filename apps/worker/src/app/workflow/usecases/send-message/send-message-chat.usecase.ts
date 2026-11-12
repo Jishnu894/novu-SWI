@@ -99,6 +99,7 @@ export function hasChatContentOverride(providerId: string, overrides: Record<str
  */
 const PHONE_BASED_CHAT_PROVIDERS: ChatProviderIdEnum[] = [
   ChatProviderIdEnum.WhatsAppBusiness,
+  ChatProviderIdEnum.AwsEndUserMessagingSocial,
   ChatProviderIdEnum.Sendblue,
   ChatProviderIdEnum.PhotonImessage,
 ];
@@ -662,7 +663,12 @@ export class SendMessageChat extends SendMessageBase {
     command: SendMessageChannelCommand,
     phoneNumber?: string
   ): Promise<SendMessageResult> {
-    if (integration?.providerId === ChatProviderIdEnum.WhatsAppBusiness && !phoneNumber) {
+    if (
+      [ChatProviderIdEnum.WhatsAppBusiness, ChatProviderIdEnum.AwsEndUserMessagingSocial].includes(
+        integration?.providerId as ChatProviderIdEnum
+      ) &&
+      !phoneNumber
+    ) {
       return await this.handleMissingResourceError(
         command,
         message,

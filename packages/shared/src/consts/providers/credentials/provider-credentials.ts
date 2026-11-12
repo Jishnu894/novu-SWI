@@ -1418,6 +1418,18 @@ export const whatsAppBusinessConfig: IConfigCredential[] = [
   },
 ];
 
+export const awsEndUserMessagingSocialConfig: IConfigCredential[] = [
+  { key: CredentialsKeyEnum.AccessKeyId, displayName: 'Access key ID', type: 'string', required: true },
+  { key: CredentialsKeyEnum.SecretAccessKey, displayName: 'Secret access key', type: 'string', required: true },
+  { key: CredentialsKeyEnum.Region, displayName: 'AWS region', type: 'string', required: true },
+  {
+    key: CredentialsKeyEnum.OriginationPhoneNumberId,
+    displayName: 'Origination phone number ID',
+    type: 'string',
+    required: true,
+  },
+];
+
 export const sendblueConfig: IConfigCredential[] = [
   {
     key: CredentialsKeyEnum.ApiKey,

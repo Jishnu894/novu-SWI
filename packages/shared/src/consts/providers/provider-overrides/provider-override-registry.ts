@@ -163,6 +163,7 @@ const CHAT_PROVIDER_OVERRIDE_CONFIGS = {
     keys: PROVIDER_OVERRIDE_KEYS[ChatProviderIdEnum.WhatsAppBusiness],
     primaryContentKey: WHATSAPP_PRIMARY_CONTENT_KEY,
   },
+  [ChatProviderIdEnum.AwsEndUserMessagingSocial]: escapeHatch('text.body'),
   [ChatProviderIdEnum.Line]: {
     primaryContentKey: null,
     seedWhenAbsent: {
